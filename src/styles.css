@@ -20,6 +20,12 @@ main > h1 {
   font-size: 4.5em;
 }
 
+main > h2 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+
 .center {
   display: block;
   margin-left: auto;
