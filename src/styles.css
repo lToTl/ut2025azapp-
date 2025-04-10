@@ -1,34 +1,139 @@
+/* Modern Reset & Base Styles */
 * {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-html, body {
   margin: 0;
-  border: 0;
   padding: 0;
-  background-color: #fff;
+  box-sizing: border-box;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
-main {
-  margin: auto;
-  width: 50%;
+body {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
-main > h1 {
-  text-align: center;
-  font-size: 4.5em;
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-main > h2 {
-  text-align: center;
-  font-size: 2.5em;
+.card {
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease-in;
 }
 
+header {
+  background: linear-gradient(135deg, #ff4e50, #f9d423);
+  padding: 25px 20px;
+  text-align: center;
+}
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+.content {
+  padding: 25px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.details {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.icon {
+  font-size: 1.2rem;
+  margin-right: 15px;
+  min-width: 24px;
+}
+
+.info {
+  font-size: 0.95rem;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Vertical aspect ratio (9:16) for the video */
+.video-container.vertical {
+  padding-bottom: 103%; /* This is a 9:16 aspect ratio (common vertical video ratio) */
+  height: 0;
+  width: 100%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .details {
+    padding: 15px;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+
+  .info {
+    font-size: 0.85rem;
+  }
 }
