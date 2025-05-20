@@ -1,8 +1,8 @@
 // Base URLs for the APIs
 // noinspection JSNonASCIINames,NonAsciiCharacters
 
-const RAAMATUD_API_URL = "http://localhost:5000/raamatud/";
-const OTSING_API_URL = "http://localhost:5001/raamatu_otsing/";
+const RAAMATUD_API_URL = "https://raamatud-api-ebegaqarewcvg7hm.northeurope-01.azurewebsites.net/raamatud/";
+const OTSING_API_URL = "https://otsing-api-c9gkh2adanama0g5.northeurope-01.azurewebsites.net/raamatu_otsing/";
 
 // Helper function to display messages/results
 function näitaTulemust(message, isError = false) {
