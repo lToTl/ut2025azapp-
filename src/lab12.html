@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ee">
+<head>
+    <meta charset="UTF-8">
+    <title>Raamatute haldamise veebirakendus</title>
+
+<script type="text/javascript" src="apiparingud.js"></script>
+
+<script>
+	window.onload=function(){
+			const frontForm = document.getElementById("frontform");
+			frontForm.addEventListener("submit", handleFormSubmit);
+
+			// Add listener for the global search button
+			const globalSearchButton = document.getElementById("globalSearchButton");
+			globalSearchButton.addEventListener("click", otsiKoikidest); // Note: click listener, not submit
+
+			listiraamatud();
+	}
+</script>
+</head>
+
+<body>
+
+Raamatu alla laadimine Gutenbergist:
+
+<form action="http://localhost:5000/raamatud/" id="frontform">
+	<label for="raamatu_id">
+		<strong>Raamatu id:</strong>
+		<input type="text" name="raamatu_id" id="raamatu_id">
+	</label>
+	<input type="submit" value="Lae alla raamat">
+</form>
+<br />
+
+<!-- Add Global Search Section -->
+Otsi kõikidest raamatutest:
+<div>
+    <label for="global_sone">
+        <strong>Sõne:</strong>
+        <input type="text" name="global_sone" id="global_sone">
+    </label>
+    <button id="globalSearchButton">Otsi kõikidest</button>
+</div>
+
+
+<br />
+<div id="tulemus"></div>
+<br />
+
+
+Raamatud:
+
+<div id="raamatud_result"></div>
+
+</body>
+</html>
